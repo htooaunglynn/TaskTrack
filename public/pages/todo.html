@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="../js/method.js"></script>
+    <script src="../js/protect.js"></script>
+    <script>
+        if (getCookie('email') == 'admin@gmail.com') {
+            window.location.href = '/pages/dashboard.html';
+        }
+    </script>
+</head>
+
+<body class="flex justify-center">
+    <section class="flex w-screen px-5 flex-col w-full sm:w-11/12 md:w-10/12 lg:w-8/12 pb-10 pt-5">
+        <nav class="flex-1/12 flex items-center mb-6">
+            <article class="flex-4/6 sm:flex-3/6 flex items-center">
+                <h1 class="flex justify-center items-center">
+                    <span class="font-medium sm:font-semibold text-sm sm:text-lg pr-2 text-stone-600">Hello, <span
+                            id="customerName"></span></span>
+                    <span id="greeting" class="font-medium sm:font-semibold text-md sm:text-3xl text-stone-950">Good
+                        Moring!</span>
+                </h1>
+            </article>
+            <article class="flex-2/6 sm:flex-3/6 flex justify-end items-center">
+                <span class="font-medium sm:font-semibold text-sm sm:text-lg pr-2 text-stone-600">Time :</span>
+                <span class="font-medium sm:font-semibold text-[#E15548] text-sm sm:text-lg text-stone-950"
+                    id="currentTime">3:40
+                    PM</span>
+                <span class="text-sm text-white p-2 ml-2 rounded bg-stone-950 cursor-pointer" onclick="signOut()">Sign
+                    Out</span>
+            </article>
+        </nav>
+        <main class="flex-11/12 flex flex-col">
+            <article class="flex flex-col justify-center">
+                <section class="flex-2/12 flex flex-col justify-evenly mb-5">
+                    <h1 class="text-center font-semibold text-3xl mb-2">Todo List</h1>
+                    <form class="shrink px-1 flex gap-2">
+                        <input class="border-2 border-stone-950 rounded px-2 py-1.5 shrink grow" type="text"
+                            id="todoInput" placeholder="Add a new task ...">
+                        <button class="cursor-pointer text-white bg-black rounded flex-none w-20 hover:bg-stone-600"
+                            id="addTodoBtn">+ Add</button>
+                    </form>
+                </section>
+                <section class="flex-10/12">
+                    <div class="text-center py-5 hidden" id="emptyState">
+                        <div class="mb-3">📝</div>
+                        <p class="text-stone-400">Your todo list is empty</p>
+                        <p class="text-stone-400">Add a task above to get started</p>
+                    </div>
+                    <div id="todoList">
+                        <div class="border-b-2 mb-4"></div>
+                        <article class="flex justify-between text-stone-500 warp">
+                            <p>Total: <span id="totalTasks">1</span> tasks</p>
+                            <p>Complete: <span id="completedTasks">0</span> tasks</p>
+                            <p>Remaining: <span id="remainingTasks">2</span> tasks</p>
+                        </article>
+                    </div>
+                </section>
+            </article>
+        </main>
+    </section>
+    <script src="../js/todo.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="../js/method.js"></script>
+    <script src="../js/protect.js"></script>
+    <script>
+        if (getCookie('email') != 'admin@gmail.com') {
+            window.location.href = '/pages/todo.html';
+        }
+    </script>
+</head>
+
+<body class="min-h-screen">
+    <section class="flex flex-col min-h-screen pb-5">
+        <nav class="border-b-2 border-stone-300 h-[80px] flex justify-between items-center px-10 shadow mb-10">
+            <h1 class="font-semibold text-stone-950 text-3xl">Todo Dashboard</h1>
+            <button class="px-3 py-2 bg-stone-950 text-white hover:bg-stone-700 cursor-pointer" onclick="signOut()">Sign
+                out</button>
+        </nav>
+        <main class="mt-4 border border-stone-300 rounded mx-10 shadow px-4 py-5 hidden" id="existUser">
+            <section class="flex justify-between items-center mb-10">
+                <h1 class="text-stone-950 font-semibold text-xl">Users</h1>
+                <input type="text" name="search" id="search" placeholder="Search users ..."
+                    class="border border-stone-300 px-6 rounded shadow-sm py-2">
+            </section>
+            <table class="min-w-full max-h-screen overflow-y-auto">
+                <thead>
+                    <tr class="border-b-1 border-stone-300">
+                        <th class="text-center pb-3">Id</th>
+                        <th class="text-center pb-3">Name</th>
+                        <th class="text-center pb-3">Email</th>
+                        <th class="text-center pb-3">Date</th>
+                        <th class="text-center pb-3">Action</th>
+                    </tr>
+                </thead>
+                <tbody id="userTableBody">
+                    <!-- Rows will be injected here -->
+                </tbody>
+            </table>
+        </main>
+        <main class="mt-4 border border-stone-300 rounded mx-10 shadow px-4 py-5" id="noUser">
+            <h1>User doesn't exist</h1>
+        </main>
+    </section>
+    <script src="../js/dashboard.js"></script>
+</body>
+
+</html>

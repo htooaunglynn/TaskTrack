@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="title"></title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./js/method.js"></script>
+    <script>
+        if (getCookie('email') != null) {
+            if (getCookie('email') != 'admin@gmail.com') {
+                window.location.href = '/pages/todo.html';
+            }
+
+            if (getCookie('email') == 'admin@gmail.com') {
+                window.location.href = '/pages/dashboard.html';
+            }
+        }
+    </script>
+</head>
+
+<body class="flex items-center justify-center h-screen bg-gray-100">
+    <section class="border-2 rounded-md min-h-[100px] min-w-[300px] shadow-2xl bg-white">
+
+        <!-- Login Form -->
+        <form action="" method="post" class="p-10 gap-4 flex flex-col" id="loginForm">
+            <div class="flex flex-col justify-center items-center gap-6">
+                <div class="text-center">
+                    <h2 class="text-4xl font-bold">Welcome Back</h2>
+                    <p class="font-thin">Sign in to your account</p>
+                </div>
+
+                <div class="flex flex-col gap-2 w-full">
+                    <label class="font-medium text-sm" for="loginEmail">Email Address</label>
+                    <input class="border-2 border-stone-300 rounded-md shadow-sm py-3 px-2" type="email"
+                        name="loginEmail" id="loginEmail" placeholder="Enter your email" required />
+                </div>
+
+                <div class="flex flex-col gap-2 w-full">
+                    <label class="font-medium text-sm" for="loginPassword">Password</label>
+                    <input class="border-2 border-stone-300 rounded-md shadow-sm py-3 px-2" type="password"
+                        name="loginPassword" id="loginPassword" placeholder="Enter your password" required />
+                </div>
+
+                <div class="w-full">
+                    <input
+                        class="text-white bg-black w-full py-2 text-lg font-semibold rounded-md shadow-sm hover:bg-stone-600 cursor-pointer"
+                        type="submit" value="Sign In" />
+                </div>
+
+                <div class="w-full">
+                    <hr class="text-stone-300 pb-3" />
+                    <p class="text-sm text-center text-stone-500">
+                        Don't have an account?
+                        <span onclick="showRegister()"
+                            class="text-stone-800 font-bold underline hover:text-stone-600 cursor-pointer">Sign
+                            up</span>
+                    </p>
+                </div>
+            </div>
+        </form>
+
+        <!-- Register Form -->
+        <form action="" method="post" class="p-10 gap-4 flex flex-col hidden" id="registerForm">
+            <div class="flex flex-col justify-center items-center gap-6">
+                <div class="text-center">
+                    <h2 class="text-4xl font-bold">Create Account</h2>
+                    <p class="font-thin">Sign up for a new account</p>
+                </div>
+
+                <div class="flex flex-col gap-2 w-full">
+                    <label class="font-medium text-sm" for="username">Full Name</label>
+                    <input class="border-2 border-stone-300 rounded-md shadow-sm py-3 px-2" type="text" name="username"
+                        id="username" placeholder="Enter your name" required />
+                </div>
+
+                <div class="flex flex-col gap-2 w-full">
+                    <label class="font-medium text-sm" for="registerEmail">Email Address</label>
+                    <input class="border-2 border-stone-300 rounded-md shadow-sm py-3 px-2" type="email"
+                        name="registerEmail" id="registerEmail" placeholder="Enter your email" required />
+                </div>
+
+                <div class="flex flex-col gap-2 w-full">
+                    <label class="font-medium text-sm" for="registerPassword">Password</label>
+                    <input class="border-2 border-stone-300 rounded-md shadow-sm py-3 px-2" type="password"
+                        name="registerPassword" id="registerPassword" placeholder="Enter your password" required />
+                </div>
+
+                <div class="flex flex-col gap-2 w-full">
+                    <label class="font-medium text-sm" for="confirmPassword">Confirm Password</label>
+                    <input class="border-2 border-stone-300 rounded-md shadow-sm py-3 px-2" type="password"
+                        name="confirmPassword" id="confirmPassword" placeholder="Confirm your password" required />
+                </div>
+
+                <div class="w-full">
+                    <input
+                        class="text-white bg-black w-full py-2 text-lg font-semibold rounded-md shadow-sm hover:bg-stone-600 cursor-pointer"
+                        type="submit" value="Sign Up" />
+                </div>
+
+                <div class="w-full">
+                    <hr class="text-stone-300 pb-3" />
+                    <p class="text-sm text-center text-stone-500">
+                        Already have an account?
+                        <span onclick="showLogin()"
+                            class="text-stone-800 font-bold underline hover:text-stone-600 cursor-pointer">Sign
+                            in</span>
+                    </p>
+                </div>
+            </div>
+        </form>
+
+    </section>
+    <script src="./js/signInUp.js"></script>
+</body>
+
+</html>
