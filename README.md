@@ -1,5 +1,5 @@
 
-# CS50 Final Project - To-Do List Web Application
+# TaskTrack - A To-Do List Web Application
 
 This is a simple to-do list web application built for the CS50 final project. It allows users to register, log in, and manage their to-do lists.
 
@@ -22,11 +22,11 @@ These instructions will get you a copy of the project up and running on your loc
 
 1.  Clone the repository:
     ```bash
-    git clone https://github.com/your-username/your-repository.git
+    git clone https://github.com/htooaunglynn/TaskTrack.git
     ```
 2.  Navigate to the project directory:
     ```bash
-    cd your-repository
+    cd TaskTrack
     ```
 3.  Install the dependencies:
     ```bash
@@ -36,10 +36,6 @@ These instructions will get you a copy of the project up and running on your loc
 ### Usage
 
 1.  Start the server:
-    ```bash
-    node data/db.js
-    ```
-2.  Start the server:
     ```bash
     node servers.js
     ```
