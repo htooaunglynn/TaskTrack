@@ -92,4 +92,4 @@ Follow these instructions to run TaskTrack locally.
 
 ## 📹 Demo
 Watch the live demo here:
-* [🔗 Vimeo Demo – TaskTrack](https://vimeo.com/1100676340?share=copy)
+* [🔗 Vimeo Demo – TaskTrack](https://vimeo.com/1100680476?share=copy)
