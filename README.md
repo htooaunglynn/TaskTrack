@@ -5,9 +5,12 @@ This is a simple to-do list web application built for the CS50 final project. It
 
 ## Features
 
+*   Admin dashboard
+*   Read and Delete user
 *   User registration and login
 *   Create, Read, Update, and Delete (CRUD) to-do items
 *   A simple and intuitive user interface
+*   to-do items for single user
 
 ## Getting Started
 
