@@ -1,5 +1,3 @@
-// setInterval(updateTimeAndGreeting, 60000);
-
 fetch('/users')
     .then(res => res.json())
     .then(users => {
@@ -27,3 +25,16 @@ fetch('/users')
         });
     })
     .catch(err => console.log(err));
+
+document.getElementById('search').addEventListener('input', function () {
+    const searchTerm = this.value.toLowerCase();
+    const rows = document.querySelectorAll('#userTableBody tr');
+
+    rows.forEach(row => {
+        const name = row.children[1]?.innerText.toLowerCase() || '';
+        const email = row.children[2]?.innerText.toLowerCase() || '';
+
+        const match = name.includes(searchTerm) || email.includes(searchTerm);
+        row.style.display = match ? '' : 'none';
+    });
+});

@@ -34,65 +34,6 @@ function showLogin() {
     document.querySelector('title').innerText = "Login";
 }
 
-// function addTodoToDOM(todo) {
-//     const todoList = document.getElementById('todoList');
-//     const article = document.createElement('article');
-//     article.className = "border-2 flex justify-between cursor-pointer hover:bg-stone-100 px-3 py-4 mb-4";
-//     article.dataset.id = todo.id;
-
-//     article.innerHTML = `
-//         <div class="flex items-center justify-center">
-//             <input class="w-4 h-4 mr-3 border-stone-950 border-8 rounded-none" type="checkbox" ${todo.completed ? 'checked' : ''}>
-//             <label>${todo.text}</label>
-//         </div>
-//         <div class="text-red-500 hover:underline cursor-pointer delete-btn">Delete</div>
-//     `;
-
-//     // Append above the stats
-//     const stats = document.querySelector('#todoList > .border-b-2');
-//     todoList.insertBefore(article, stats);
-
-//     // Handle checkbox toggle
-//     const checkbox = article.querySelector('input[type="checkbox"]');
-//     checkbox.addEventListener('change', () => {
-//         fetch(`/todos/${todo.id}/complete`, {
-//             method: 'PUT',
-//             headers: { 'Content-Type': 'application/json' },
-//             body: JSON.stringify({ completed: checkbox.checked })
-//         }).then(() => updateCounts());
-//     });
-
-//     // Handle delete
-//     article.querySelector('.delete-btn').addEventListener('click', () => {
-//         fetch(`/todos/${todo.id}`, { method: 'DELETE' })
-//             .then(res => {
-//                 if (res.ok) {
-//                     article.remove();
-//                     updateCounts();
-//                 }
-//             });
-//     });
-
-//     updateCounts();
-// }
-
-// function updateCounts() {
-//     const allTodos = document.querySelectorAll('#todoList article[data-id]');
-//     const completedTodos = document.querySelectorAll("#todoList article[data-id] input[type='checkbox']:checked");
-
-//     const totalTasksEl = document.getElementById('totalTasks');
-//     const completedTasksEl = document.getElementById('completedTasks');
-//     const remainingTasksEl = document.getElementById('remainingTasks');
-
-//     if (totalTasksEl && completedTasksEl && remainingTasksEl) {
-//         totalTasksEl.textContent = allTodos.length;
-//         completedTasksEl.textContent = completedTodos.length;
-//         remainingTasksEl.textContent = allTodos.length - completedTodos.length;
-//     } else {
-//         console.warn("One or more task counter elements not found in the DOM.");
-//     }
-// }
-
 function signOut() {
     deleteCookie('id');
     deleteCookie('email');
