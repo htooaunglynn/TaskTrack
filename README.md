@@ -1,6 +1,18 @@
 # 🎯 TaskTrack - A To-Do List Web Application
 
-**TaskTrack** is a simple and intuitive to-do list web application developed as a final project for [CS50x](https://cs50.harvard.edu/x/). It allows users to register, log in, and manage their personal to-do lists, with an admin dashboard for managing users.
+## Description:
+
+**TaskTrack** is a full-stack web application designed to help users organize and manage their daily tasks efficiently. Built with modern web technologies, it provides a seamless user experience for task management while maintaining robust security and data integrity. It allows users to register, log in, and manage their personal to-do lists, with an admin dashboard for managing users.
+
+### Key Capabilities:
+- **User Authentication**: Secure registration and login system with bcrypt password hashing
+- **Personal Task Management**: Each user has their own private to-do list with full CRUD functionality
+- **Admin Control Panel**: Administrative interface for user management and oversight
+- **Responsive Design**: Clean, modern interface built with Tailwind CSS that works across all devices
+- **Real-time Updates**: Dynamic task management without page refreshes
+- **Data Persistence**: Reliable SQLite database for storing user data and tasks
+
+The application follows best practices in web development, including secure authentication, proper session management, and a clean separation of concerns between frontend and backend components. It's designed to be both user-friendly for end users and maintainable for developers.
 
 ---
 
@@ -88,8 +100,3 @@ Follow these instructions to run TaskTrack locally.
 ├── servers.js
 └── README.md
 ```
-
-
-## 📹 Demo
-Watch the live demo here:
-* [🔗 Vimeo Demo – TaskTrack](https://vimeo.com/1100680476?share=copy)
