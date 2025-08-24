@@ -1,6 +1,6 @@
 # 🎯 TaskTrack - A To-Do List Web Application
 
-## Description:
+### Description:
 
 **TaskTrack** is a full-stack web application designed to help users organize and manage their daily tasks efficiently. Built with modern web technologies, it provides a seamless user experience for task management while maintaining robust security and data integrity. It allows users to register, log in, and manage their personal to-do lists, with an admin dashboard for managing users.
 
